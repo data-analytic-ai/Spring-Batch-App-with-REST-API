@@ -3,6 +3,8 @@ package com.infybuzz.controller;
 import java.util.HashMap;
 import java.util.Map;
 
+import lombok.extern.slf4j.Slf4j;
+import lombok.extern.slf4j.XSlf4j;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobParameter;
 import org.springframework.batch.core.JobParameters;
@@ -20,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/job")
+@Slf4j
 public class JobController {
 	
 	@Autowired
@@ -43,8 +46,10 @@ public class JobController {
 		
 		if(jobName.equals("First Job")) {
 			jobLauncher.run(firstJob, jobParameters);
+			log.debug("first Job ended");
 		} else if(jobName.equals("Second Job")) {
 			jobLauncher.run(secondJob, jobParameters);
+			log.debug("second Job ended");
 		}
 		
 		return "Job Started...";

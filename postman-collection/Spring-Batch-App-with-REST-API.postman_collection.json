@@ -1,0 +1,33 @@
+{
+	"info": {
+		"_postman_id": "440b07b2-8269-4675-932c-189978f64d37",
+		"name": "Spring-Batch-App-with-REST-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31820406",
+		"_collection_link": "https://for-devs-4562.postman.co/workspace/For-devs-Workspace~30c9a711-ad03-49a2-9c12-7ca23323b168/collection/31820406-440b07b2-8269-4675-932c-189978f64d37?action=share&source=collection_link&creator=31820406"
+	},
+	"item": [
+		{
+			"name": "/start/{jobName}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/job/start/First Job",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"job",
+						"start",
+						"First Job"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
